@@ -1,0 +1,10 @@
+#paralal {
+  background: linear-gradient(#00000033, #00000033), url(../img/bg/paralal.jpg) no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 100px 0px;
+}
+.btn-paralal {
+  border: none;
+  border-radius: 0;
+}

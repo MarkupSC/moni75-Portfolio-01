@@ -1,0 +1,29 @@
+#goTop {
+  width: 50px;
+  height: 32px;
+  border-radius: 15px 0px 0 15px;
+  background-color: #ccccccbf;
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 0px;
+  z-index: 99;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  color: var(--mainColor);
+}
+
+#goTop a {
+  color: var(--white);
+  cursor: pointer;
+  position: relative;
+  top: -7px;
+  right: -3px;
+  transition: 0.5s;
+}
+
+#goTop a:hover {
+  color: green;
+  line-height: 30px;
+}

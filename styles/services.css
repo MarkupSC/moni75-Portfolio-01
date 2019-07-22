@@ -1,0 +1,27 @@
+.item {
+  margin: 50px auto;
+  max-width: 400px;
+  height: 260px;
+}
+.read-more>a{
+  color: var(--lightBlack);
+  font-weight: 500;
+  margin-right: 5px;
+  display: none;
+  transition: 1s;
+}
+.read-more-line {
+  width: 25px;
+  height: 2px;
+  background-color: var(--lightBlack);
+  margin-top: 13px;
+  transition: 1s;
+}
+.item:hover .read-more>a{
+  display: block;
+  transition: 1s;
+}
+.icon {
+  color: var(--lightBlack);
+  margin: 10px;
+}

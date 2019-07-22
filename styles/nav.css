@@ -1,0 +1,6 @@
+.navbar-custom {
+  margin: 39px inherit;
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+}

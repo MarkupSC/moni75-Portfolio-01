@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <style>
+    html,
+    body {
+      font-family: "Ubuntu", sans-serif;
+      background-color: #ddd;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      perspective: 1500px;
+      height: 100%;
+    }
+
+    /* 
+    .skill-box {
+      width: 80%;
+      padding: 15px;
+      background-color: #eee;
+      border-radius: 5px;
+      position: absolute;
+      max-width: 600px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
+    } */
+
+    h3 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .skills {
+      margin-bottom: 20px;
+    }
+
+    .skills>ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .skills ul li {
+      padding: 5px;
+      margin-bottom: 10px;
+      position: relative;
+      border-radius: 5px;
+    }
+
+    .skills ul li span {
+      color: black;
+      /* display: flex; */
+    }
+
+    span.bar {
+      position: absolute;
+      height: 4px;
+      bottom: 0;
+      left: 0;
+      border-radius: 5px;
+      display: block;
+      background: red;
+    }
+
+    span.bar b {
+      color: black;
+      font-weight: normal;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin-bottom: 7px;
+      font-size: 13px;
+      display: block;
+    }
+
+    .skills ul li::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #ddd;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+      margin-bottom: 2px;
+    }
+  </style>
+</head>
+
+<body class="skill-box">
+  <h3>Development</h3>
+  <div class="skills">
+    <ul>
+      <li data-percent="95">
+        <span>HTML5 & JADE</span><span class="bar"><b></b></span>
+      </li>
+      <li data-percent="90">
+        <span>CSS3 & SASS</span><span class="bar"><b></b></span>
+      </li>
+      <li data-percent="60">
+        <span>JavaScript</span><span class="bar"><b></b></span>
+      </li>
+      <li data-percent="70">
+        <span>jQuery</span><span class="bar"><b></b></span>
+      </li>
+      <li data-percent="55">
+        <span>CoffeeScript</span><span class="bar"><b></b></span>
+      </li>
+      <li data-percent="35">
+        <span>NodeJS</span><span class="bar"><b></b></span>
+      </li>
+      <li data-percent="50">
+        <span>VueJS</span><span class="bar"><b></b></span>
+      </li>
+    </ul>
+  </div>
+
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script>
+    (function () {
+      $(document).ready(function () {
+        $(".skill-box li")
+          .find(".bar")
+          .each(function (i) {
+            $(this)
+              .find("b")
+              .text(
+                $(this)
+                .parent()
+                .attr("data-percent") + "%"
+              );
+            return $(this)
+              .delay(i)
+              .animate({
+                  width: $(this)
+                    .parent()
+                    .attr("data-percent") + "%"
+                },
+                // 1000,
+                // function () {
+                //   return $(this)
+                //     .find("b")
+                //     .fadeIn();
+                // }
+              );
+          });
+      });
+    }.call(this));
+  </script>
+</body>
+
+</html>

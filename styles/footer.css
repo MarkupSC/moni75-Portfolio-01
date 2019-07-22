@@ -1,0 +1,15 @@
+footer {
+  background-color: var(--lightBlack);
+  padding: 50px 0;
+  color: var(--white);
+}
+.s-icon {
+  color: var(--white);
+  font-size: 18px;
+  margin-left: 10px;
+  font-weight: 300;
+}
+.s-icon:active, .s-icon:hover, .s-icon:focus {
+  color: var(--white) !important;
+  font-weight: 300;
+}

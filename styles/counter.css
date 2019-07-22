@@ -1,0 +1,21 @@
+#counter {
+  background: linear-gradient(#ffffff33, #ffffff33), url(../img/bg/counterBG.jpg) no-repeat center;
+  background-size: cover;
+  padding: 100px 0;
+}
+#counter .icon{
+  width: 75px;
+  height: 75px;
+  text-align: center;
+  line-height: 75px;
+  color: var(--white);
+  background-color: var(--lightBlack);
+  border: none;
+  border-radius: 50%;
+  margin: 15px auto;
+}
+#counter p {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--lightBlack);
+}

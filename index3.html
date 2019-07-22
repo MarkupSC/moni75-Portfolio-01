@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Raleway);
+
+    body {
+      margin: 10px;
+      font-family: 'Raleway';
+    }
+
+    .skills-holder {
+      padding: 0 11px 20px !important;
+    }
+
+    .skill {
+      margin-bottom: 15px;
+    }
+
+    .skill label {
+      font-size: 16px;
+      line-height: 40px;
+    }
+
+    .skill-bar {
+      background-color: #ccc;
+      height: 3px;
+      width: 100%;
+    }
+
+    .skill-bar .level {
+      background-color: black;
+      border-color: #222;
+      border: none;
+      height: 3px;
+      width: 0;
+      position: relative;
+    }
+
+    .level::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      background: black;
+      position: absolute;
+      right: -5px;
+      top: -4px;
+    }
+
+/* *********************************************** */
+/* *********************************************** */
+/* *********************************************** */
+/* *********************************************** */
+/* *********************************************** */
+/* *********************************************** */
+html, body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #ddd;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  perspective: 1500px;
+  height: 100%;
+}
+
+.skill-box {
+  width: 80%;
+  padding: 15px;
+  background-color: #eee;
+  border-radius: 5px;
+  position: absolute;
+  max-width: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
+}
+.skill-box > h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+.skill-box > .skills {
+  margin-bottom: 20px;
+}
+.skill-box > .skills > ul {
+  list-style-type: none;
+  padding: 0;
+}
+.skill-box > .skills > ul > li {
+  padding: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  border-radius: 5px;
+}
+.skill-box > .skills > ul > li > span {
+  color: black;
+}
+.skill-box > .skills > ul > li > span.bar {
+  position: absolute;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+  display: block;
+  background: red;
+}
+.skill-box > .skills > ul > li > span.bar > b {
+  color: green;
+  font-weight: normal;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 7px;
+  font-size: 13px;
+  display: none;
+}
+.skill-box > .skills > ul > li::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  margin-bottom: 2px;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <div class="skills-holder">
+    <div class="skill">
+
+      <div class="skill-bar">
+        <div data-level="90" class="level html"></div>
+      </div>
+      <label>HTML</label>
+    </div>
+    <div class="skill">
+      <div class="skill-bar">
+        <div data-level="80" class="level css"></div>
+      </div>
+      <label>CSS</label>
+      <span id="percent" style="float: right;margin-top: 10px">80%</span>
+    </div>
+    <div class="skill">
+      <div class="skill-bar">
+        <div data-level="80" class="level jquery"></div>
+      </div>
+      <label>jQuery</label>
+    </div>
+    <div class="skill">
+      <div class="skill-bar">
+        <div data-level="70" class="level javascript"></div>
+      </div>
+      <label>JavaScript</label>
+    </div>
+    <div class="skill">
+      <div class="skill-bar">
+        <div data-level="60" class="level ajax"></div>
+      </div>
+      <label>AJAX</label>
+    </div>
+
+    <div class="skill">
+      <div class="skill-bar">
+        <div data-level="65" class="level php"></div>
+      </div>
+      <label>PHP</label>
+    </div>
+    <div class="skill">
+      <div class="skill-bar">
+        <div data-level="65" class="level mysql"></div>
+      </div>
+      <label>MySQL</label>
+    </div>
+  </div>
+  
+
+
+  
+<div class="skill-box">
+    <h3>Development</h3>
+    <div class="skills">
+      <ul>
+        <li data-percent="95"><span>HTML5 & JADE</span><span class="bar"><b></b></span></li>
+        <li data-percent="90"><span>CSS3 & SASS</span><span class="bar"><b></b></span></li>
+        <li data-percent="60"><span>JavaScript</span><span class="bar"><b></b></span></li>
+        <li data-percent="70"><span>jQuery</span><span class="bar"><b></b></span></li>
+        <li data-percent="55"><span>CoffeeScript</span><span class="bar"><b></b></span></li>
+        <li data-percent="35"><span>NodeJS</span><span class="bar"><b></b></span></li>
+        <li data-percent="50"><span>VueJS</span><span class="bar"><b></b></span></li>
+      </ul>
+    </div>
+  </div>
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script>
+    /*
+     * jQuery Easing v1.3 - https://gsgd.co.uk/sandbox/jquery/easing/
+     *
+     * Uses the built in easing capabilities added In jQuery 1.1
+     * to offer multiple easing options
+     *
+     * TERMS OF USE - jQuery Easing
+     * 
+     * Open source under the BSD License. 
+     * 
+     * Copyright © 2008 George McGinley Smith
+     * All rights reserved.
+     * 
+     * Redistribution and use in source and binary forms, with or without modification, 
+     * are permitted provided that the following conditions are met:
+     * 
+     * Redistributions of source code must retain the above copyright notice, this list of 
+     * conditions and the following disclaimer.
+     * Redistributions in binary form must reproduce the above copyright notice, this list 
+     * of conditions and the following disclaimer in the documentation and/or other materials 
+     * provided with the distribution.
+     * 
+     * Neither the name of the author nor the names of contributors may be used to endorse 
+     * or promote products derived from this software without specific prior written permission.
+     * 
+     * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
+     * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+     * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+     *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+     *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+     *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
+     * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+     *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
+     * OF THE POSSIBILITY OF SUCH DAMAGE. 
+     *
+     */
+
+    // t: current time, b: begInnIng value, c: change In value, d: duration
+    jQuery.easing['jswing'] = jQuery.easing['swing'];
+
+    jQuery.extend(jQuery.easing, {
+      def: 'easeOutQuad',
+      swing: function (x, t, b, c, d) {
+        //alert(jQuery.easing.default);
+        return jQuery.easing[jQuery.easing.def](x, t, b, c, d);
+      },
+      easeInQuad: function (x, t, b, c, d) {
+        return c * (t /= d) * t + b;
+      },
+      easeOutQuad: function (x, t, b, c, d) {
+        return -c * (t /= d) * (t - 2) + b;
+      },
+      easeInOutQuad: function (x, t, b, c, d) {
+        if ((t /= d / 2) < 1) return c / 2 * t * t + b;
+        return -c / 2 * ((--t) * (t - 2) - 1) + b;
+      },
+      easeInCubic: function (x, t, b, c, d) {
+        return c * (t /= d) * t * t + b;
+      },
+      easeOutCubic: function (x, t, b, c, d) {
+        return c * ((t = t / d - 1) * t * t + 1) + b;
+      },
+      easeInOutCubic: function (x, t, b, c, d) {
+        if ((t /= d / 2) < 1) return c / 2 * t * t * t + b;
+        return c / 2 * ((t -= 2) * t * t + 2) + b;
+      },
+      easeInQuart: function (x, t, b, c, d) {
+        return c * (t /= d) * t * t * t + b;
+      },
+      easeOutQuart: function (x, t, b, c, d) {
+        return -c * ((t = t / d - 1) * t * t * t - 1) + b;
+      },
+      easeInOutQuart: function (x, t, b, c, d) {
+        if ((t /= d / 2) < 1) return c / 2 * t * t * t * t + b;
+        return -c / 2 * ((t -= 2) * t * t * t - 2) + b;
+      },
+      easeInQuint: function (x, t, b, c, d) {
+        return c * (t /= d) * t * t * t * t + b;
+      },
+      easeOutQuint: function (x, t, b, c, d) {
+        return c * ((t = t / d - 1) * t * t * t * t + 1) + b;
+      },
+      easeInOutQuint: function (x, t, b, c, d) {
+        if ((t /= d / 2) < 1) return c / 2 * t * t * t * t * t + b;
+        return c / 2 * ((t -= 2) * t * t * t * t + 2) + b;
+      },
+      easeInSine: function (x, t, b, c, d) {
+        return -c * Math.cos(t / d * (Math.PI / 2)) + c + b;
+      },
+      easeOutSine: function (x, t, b, c, d) {
+        return c * Math.sin(t / d * (Math.PI / 2)) + b;
+      },
+      easeInOutSine: function (x, t, b, c, d) {
+        return -c / 2 * (Math.cos(Math.PI * t / d) - 1) + b;
+      },
+      easeInExpo: function (x, t, b, c, d) {
+        return (t == 0) ? b : c * Math.pow(2, 10 * (t / d - 1)) + b;
+      },
+      easeOutExpo: function (x, t, b, c, d) {
+        return (t == d) ? b + c : c * (-Math.pow(2, -10 * t / d) + 1) + b;
+      },
+      easeInOutExpo: function (x, t, b, c, d) {
+        if (t == 0) return b;
+        if (t == d) return b + c;
+        if ((t /= d / 2) < 1) return c / 2 * Math.pow(2, 10 * (t - 1)) + b;
+        return c / 2 * (-Math.pow(2, -10 * --t) + 2) + b;
+      },
+      easeInCirc: function (x, t, b, c, d) {
+        return -c * (Math.sqrt(1 - (t /= d) * t) - 1) + b;
+      },
+      easeOutCirc: function (x, t, b, c, d) {
+        return c * Math.sqrt(1 - (t = t / d - 1) * t) + b;
+      },
+      easeInOutCirc: function (x, t, b, c, d) {
+        if ((t /= d / 2) < 1) return -c / 2 * (Math.sqrt(1 - t * t) - 1) + b;
+        return c / 2 * (Math.sqrt(1 - (t -= 2) * t) + 1) + b;
+      },
+      easeInElastic: function (x, t, b, c, d) {
+        var s = 1.70158;
+        var p = 0;
+        var a = c;
+        if (t == 0) return b;
+        if ((t /= d) == 1) return b + c;
+        if (!p) p = d * .3;
+        if (a < Math.abs(c)) {
+          a = c;
+          var s = p / 4;
+        } else var s = p / (2 * Math.PI) * Math.asin(c / a);
+        return -(a * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p)) + b;
+      },
+      easeOutElastic: function (x, t, b, c, d) {
+        var s = 1.70158;
+        var p = 0;
+        var a = c;
+        if (t == 0) return b;
+        if ((t /= d) == 1) return b + c;
+        if (!p) p = d * .3;
+        if (a < Math.abs(c)) {
+          a = c;
+          var s = p / 4;
+        } else var s = p / (2 * Math.PI) * Math.asin(c / a);
+        return a * Math.pow(2, -10 * t) * Math.sin((t * d - s) * (2 * Math.PI) / p) + c + b;
+      },
+      easeInOutElastic: function (x, t, b, c, d) {
+        var s = 1.70158;
+        var p = 0;
+        var a = c;
+        if (t == 0) return b;
+        if ((t /= d / 2) == 2) return b + c;
+        if (!p) p = d * (.3 * 1.5);
+        if (a < Math.abs(c)) {
+          a = c;
+          var s = p / 4;
+        } else var s = p / (2 * Math.PI) * Math.asin(c / a);
+        if (t < 1) return -.5 * (a * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p)) + b;
+        return a * Math.pow(2, -10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p) * .5 + c + b;
+      },
+      easeInBack: function (x, t, b, c, d, s) {
+        if (s == undefined) s = 1.70158;
+        return c * (t /= d) * t * ((s + 1) * t - s) + b;
+      },
+      easeOutBack: function (x, t, b, c, d, s) {
+        if (s == undefined) s = 1.70158;
+        return c * ((t = t / d - 1) * t * ((s + 1) * t + s) + 1) + b;
+      },
+      easeInOutBack: function (x, t, b, c, d, s) {
+        if (s == undefined) s = 1.70158;
+        if ((t /= d / 2) < 1) return c / 2 * (t * t * (((s *= (1.525)) + 1) * t - s)) + b;
+        return c / 2 * ((t -= 2) * t * (((s *= (1.525)) + 1) * t + s) + 2) + b;
+      },
+      easeInBounce: function (x, t, b, c, d) {
+        return c - jQuery.easing.easeOutBounce(x, d - t, 0, c, d) + b;
+      },
+      easeOutBounce: function (x, t, b, c, d) {
+        if ((t /= d) < (1 / 2.75)) {
+          return c * (7.5625 * t * t) + b;
+        } else if (t < (2 / 2.75)) {
+          return c * (7.5625 * (t -= (1.5 / 2.75)) * t + .75) + b;
+        } else if (t < (2.5 / 2.75)) {
+          return c * (7.5625 * (t -= (2.25 / 2.75)) * t + .9375) + b;
+        } else {
+          return c * (7.5625 * (t -= (2.625 / 2.75)) * t + .984375) + b;
+        }
+      },
+      easeInOutBounce: function (x, t, b, c, d) {
+        if (t < d / 2) return jQuery.easing.easeInBounce(x, t * 2, 0, c, d) * .5 + b;
+        return jQuery.easing.easeOutBounce(x, t * 2 - d, 0, c, d) * .5 + c * .5 + b;
+      }
+    });
+
+    /*
+     *
+     * TERMS OF USE - EASING EQUATIONS
+     * 
+     * Open source under the BSD License. 
+     * 
+     * Copyright © 2001 Robert Penner
+     * All rights reserved.
+     * 
+     * Redistribution and use in source and binary forms, with or without modification, 
+     * are permitted provided that the following conditions are met:
+     * 
+     * Redistributions of source code must retain the above copyright notice, this list of 
+     * conditions and the following disclaimer.
+     * Redistributions in binary form must reproduce the above copyright notice, this list 
+     * of conditions and the following disclaimer in the documentation and/or other materials 
+     * provided with the distribution.
+     * 
+     * Neither the name of the author nor the names of contributors may be used to endorse 
+     * or promote products derived from this software without specific prior written permission.
+     * 
+     * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
+     * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+     * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+     * COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+     * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+     * GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
+     * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+     * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
+     * OF THE POSSIBILITY OF SUCH DAMAGE. 
+     *
+     */
+
+    $(document).ready(function () {
+
+      function animateSkills() {
+        if ($('.skill').length > 0) {
+          var counter = 1;
+          $('.skill').each(function () {
+            var el = $(this);
+            var level = el.find('.level').attr('data-level');
+            el.find('.level').delay(counter * 100).animate({
+              width: level + "%"
+            }, 100, "easeInSine");
+            counter++;
+          });
+        }
+      }
+
+      animateSkills();
+
+    });
+// ???????????????????????????????????????
+// ???????????????????????????????????????
+// ???????????????????????????????????????
+    (function () {
+  $(document).ready(function () {
+    $('.skill-box li').find('.bar').each(function (i) {
+      $(this).find('b').text($(this).parent().attr('data-percent') + '%');
+      return $(this).delay(i * 100).animate({
+        width: $(this).parent().attr('data-percent') + '%' },
+      1000, function () {
+        return $(this).find('b').fadeIn();
+      });
+    });
+  });
+
+}).call(this);
+
+//# sourceURL=coffeescript
+  </script>
+</body>
+
+</html>

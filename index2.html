@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="This is a user Portfolio website.." />
+  <meta name="author" content="Designer: Hasan Moni & Developer: Sofiqul Islam" />
+  <title>Portfolio Website | Hasan Moni</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .skills p {
+      margin: 0;
+      padding: 0;
+      font-weight: 500;
+      float: left;
+      color: #000;
+    }
+
+    .skills .percent {
+      float: right;
+      color: #000;
+      /* margin-top: -30px; */
+      font-weight: 500
+    }
+
+    .skills .bar {
+      position: relative;
+      width: 100%;
+      height: 3px;
+      background-color: #ccc;
+      margin: 15px 0 10px;
+    }
+
+    .skills .bar .progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: black;
+      overflow: inherit !important;
+    }
+
+    .skills .bar .progress::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      right: -6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: black;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Hero Start -->
+  <header id="hero">
+    <div id="heroBG">
+      <!-- Hero (Swiper) Slider Start -->
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./img/sliderBG/hero-bg-1.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/sliderBG/hero-bg-2.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/sliderBG/hero-bg-3.jpg" alt=""></div>
+      </div>
+      <!-- Hero Slider End -->
+
+      <div class="hero-title">
+        <h1 class="display-4">I Am <span>Designer</span></h1>
+      </div>
+      <a href="#about" class="bounce-icon">
+        <div class="wheel">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </div>
+      </a>
+    </div>
+    <!-- Hero End -->
+
+
+    <!-- ************************************* -->
+    <!-- ************************************* -->
+    <!-- ************************************* -->
+    <!-- ************************************* -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid navbar-custom">
+      <nav class="container navbar navbar-expand-md navbar-light">
+        <a class="navbar-brand" href="#">EroSpace</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#hero">Home
+                <span class="sr-only">(current)</span><a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonial">Testimonial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#blogs">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- Navbar End -->
+
+
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+
+
+  <!-- About Me Start -->
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 left">
+          <img class="about-bg" src="./img/about/about-bg.jpg" alt="">
+          <img class="about-man" src="./img/about/about-man.jpg" alt="">
+        </div> <!-- /.col-md-6 -->
+        <div class="col-md-6">
+          <div style="height: 150px"></div>
+          <h1>About Me</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis dignissimos asperiores itaque
+            voluptatibus aut sit, possimus qui fugit nam reiciendis facilis omnis?</p>
+          <div>
+            <div class="skills">
+              <div class="skill-label">
+                <div class="bar">
+                  <div class="progress">100%</div>
+                </div>
+                <p>Adobe Photoshop</p>
+                <span class="percent">100%</span>
+                <div style="clear: both;"></div>
+              </div>
+            </div>
+
+            <div class="skills">
+              <div class="skill-label">
+                <div class="bar">
+                  <div class="progress">65%</div>
+                </div>
+                <p>Interaction</p>
+                <span class="percent">65%</span>
+                <div style="clear: both;"></div>
+              </div>
+            </div>
+
+            <div class="skills">
+              <div class="skill-label">
+                <div class="bar">
+                  <div class="progress">80%</div>
+                </div>
+                <p>Adobe XD</p>
+                <span class="percent">80%</span>
+                <div style="clear: both;"></div>
+              </div>
+            </div>
+
+
+          </div> <!-- /.col-md-6 -->
+        </div>
+      </div>
+  </section>
+  <!-- About Me End -->
+  <script>
+    var skill = document.getElementsByClassName('progress')
+    // var skilPercent = skill.dataset.percent
+  </script>
+
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+  <div style="height: 100px"></div>
+
+
+  <!-- My Services Start -->
+  <section id="services">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-6 offset-md-3">
+          <h3>My Services</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, minima?</p>
+        </div>
+      </div> <!-- Section Header -->
+
+      <div class="row">
+        <div class="item col-md-4 col-sm-6">
+          <i class="icon fa fa-3x fa-user"></i>
+          <h4>Graphic Design</h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore accusantium velit molestiae quidem,
+            dolore dignissimos?</p>
+          <p class="read-more d-flex">
+            <a href="#more">Read More</a>
+            <span class="read-more-line"></span>
+          </p>
+        </div> <!-- Item-1 -->
+
+
+        <div class="item col-md-4 col-sm-6">
+          <i class="icon fa fa-3x fa-user"></i>
+          <h4>Graphic Design</h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore accusantium velit molestiae quidem,
+            dolore dignissimos?</p>
+          <p class="read-more d-flex">
+            <a href="#more">Read More</a>
+            <span class="read-more-line"></span>
+          </p>
+        </div> <!-- Item-2 -->
+
+
+        <div class="item col-md-4 col-sm-6">
+          <i class="icon fa fa-3x fa-user"></i>
+          <h4>Graphic Design</h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore accusantium velit molestiae quidem,
+            dolore dignissimos?</p>
+          <p class="read-more d-flex">
+            <a href="#more">Read More</a>
+            <span class="read-more-line"></span>
+          </p>
+        </div> <!-- Item-3 -->
+
+
+        <div class="item col-md-4 col-sm-6">
+          <i class="icon fa fa-3x fa-user"></i>
+          <h4>Graphic Design</h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore accusantium velit molestiae quidem,
+            dolore dignissimos?</p>
+          <p class="read-more d-flex">
+            <a href="#more">Read More</a>
+            <span class="read-more-line"></span>
+          </p>
+        </div> <!-- Item-4 -->
+
+
+        <div class="item col-md-4 col-sm-6">
+          <i class="icon fa fa-3x fa-user"></i>
+          <h4>Graphic Design</h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore accusantium velit molestiae quidem,
+            dolore dignissimos?</p>
+          <p class="read-more d-flex">
+            <a href="#more">Read More</a>
+            <span class="read-more-line"></span>
+          </p>
+        </div> <!-- Item-5 -->
+
+
+        <div class="item col-md-4 col-sm-6">
+          <i class="icon fa fa-3x fa-user"></i>
+          <h4>Graphic Design</h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore accusantium velit molestiae quidem,
+            dolore dignissimos?</p>
+          <p class="read-more d-flex">
+            <a href="#more">Read More</a>
+            <span class="read-more-line"></span>
+          </p>
+        </div> <!-- Item-6 -->
+
+      </div> <!-- My Services Items -->
+    </div>
+  </section>
+  <!-- My Services End -->
+
+
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+
+
+  <!-- My Portfilio Start -->
+  <section id="portfolio">
+    <div class="container">
+      <div class="row mb-5 text-center">
+        <div class="col-md-6 offset-md-3">
+          <h3>My Portfolio</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, minima?</p>
+        </div>
+      </div> <!-- Section Header -->
+
+      <div class="row">
+        <div class="col-md-4 col-sm-6 text-center">
+          <img src="./img/portfolio/01.jpg" alt="01" class="port-img">
+          <img src="./img/portfolio/04.jpg" alt="04" class="port-img">
+        </div> <!-- Collomn 1 -->
+
+        <div class="col-md-4 col-sm-6 text-center">
+          <img src="./img/portfolio/02.jpg" alt="02" class="port-img">
+          <img src="./img/portfolio/05.jpg" alt="05" class="port-img">
+        </div> <!-- Collomn 2 -->
+
+        <div class="col-md-4 col-sm-6 text-center">
+          <img src="./img/portfolio/03.jpg" alt="03" class="port-img">
+          <img src="./img/portfolio/06.jpg" alt="06" class="port-img"> <!-- Collomn 3 -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- My Portfilio End -->
+
+
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+
+
+  <!-- Paralal Start -->
+  <section id="paralal">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 text-center">
+          <p class="text-light">Do you love my work?</p>
+          <h3 class="text-light mb-4">Available For Freelance Work</h3>
+          <a href="#" class="px-5 btn btn-light btn-paralal">Hire Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Paralal End -->
+
+
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+
+
+  <!-- Tesimonials Start -->
+  <section id="testimonial">
+    <div class="container">
+      <div class="row mb-5 text-center">
+        <div class="col-md-6 offset-md-3">
+          <h3>Tesimonials</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, minima?</p>
+        </div>
+      </div> <!-- Section Header -->
+
+      <!-- Testimonial Slider Start -->
+      <div class="testimonial-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="row">
+              <div class="col-sm-6 col-xs-12">
+                <div class="user d-flex">
+                  <img src="./img/testimonial/testimonial1.jpg" alt="Jonathon Lee">
+                  <div class="username">
+                    <a href="#Jonathon-Lee">
+                      <h4>Jonathon Lee</h4>
+                    </a>
+                    <p>UI/UX Designer</p>
+                  </div>
+                </div> <!-- /.user -->
+
+                <p class="test-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga quam quidem odio
+                  quis
+                  repudiandae dolore dolor, facilis expedita nemo beatae? Quae sapiente eius voluptate excepturi maxime
+                  ipsa
+                  dolorem quisquam accusamus.</p>
+              </div> <!-- Item-1 -->
+
+              <div class="col-sm-6 col-xs-12">
+                <div class="user d-flex">
+                  <img src="./img/testimonial/testimonial2.jpg" alt="Emalia Clark">
+                  <div class="username">
+                    <a href="#Emalia-Clark">
+                      <h4>Emalia Clark</h4>
+                    </a>
+                    <p>Front-end Developer</p>
+                  </div>
+                </div> <!-- /.user -->
+
+                <p class="test-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga quam quidem odio
+                  quis
+                  repudiandae dolore dolor, facilis expedita nemo beatae? Quae sapiente eius voluptate excepturi maxime
+                  ipsa
+                  dolorem quisquam accusamus.</p>
+              </div> <!-- Item-2 -->
+            </div>
+          </div> <!-- Slide 1 -->
+
+          <div class="swiper-slide">
+            <div class="row">
+              <div class="col-sm-6 col-xs-12">
+                <div class="user d-flex">
+                  <img src="./img/testimonial/testimonial1.jpg" alt="Jonathon Lee">
+                  <div class="username">
+                    <a href="#Jonathon-Lee">
+                      <h4>Jonathon Lee</h4>
+                    </a>
+                    <p>UI/UX Designer</p>
+                  </div>
+                </div> <!-- /.user -->
+
+                <p class="test-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga quam quidem odio
+                  quis
+                  repudiandae dolore dolor, facilis expedita nemo beatae? Quae sapiente eius voluptate excepturi maxime
+                  ipsa
+                  dolorem quisquam accusamus.</p>
+              </div> <!-- Item-1 -->
+
+              <div class="col-sm-6 col-xs-12">
+                <div class="user d-flex">
+                  <img src="./img/testimonial/testimonial2.jpg" alt="Emalia Clark">
+                  <div class="username">
+                    <a href="#Emalia-Clark">
+                      <h4>Emalia Clark</h4>
+                    </a>
+                    <p>Front-end Developer</p>
+                  </div>
+                </div> <!-- /.user -->
+
+                <p class="test-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga quam quidem odio
+                  quis
+                  repudiandae dolore dolor, facilis expedita nemo beatae? Quae sapiente eius voluptate excepturi maxime
+                  ipsa
+                  dolorem quisquam accusamus.</p>
+              </div> <!-- Item-2 -->
+            </div>
+          </div> <!-- Slide 2 -->
+
+          <div class="swiper-slide">
+            <div class="row">
+              <div class="col-sm-6 col-xs-12">
+                <div class="user d-flex">
+                  <img src="./img/testimonial/testimonial1.jpg" alt="Jonathon Lee">
+                  <div class="username">
+                    <a href="#Jonathon-Lee">
+                      <h4>Jonathon Lee</h4>
+                    </a>
+                    <p>UI/UX Designer</p>
+                  </div>
+                </div> <!-- /.user -->
+
+                <p class="test-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga quam quidem odio
+                  quis
+                  repudiandae dolore dolor, facilis expedita nemo beatae? Quae sapiente eius voluptate excepturi maxime
+                  ipsa
+                  dolorem quisquam accusamus.</p>
+              </div> <!-- Item-1 -->
+
+              <div class="col-sm-6 col-xs-12">
+                <div class="user d-flex">
+                  <img src="./img/testimonial/testimonial2.jpg" alt="Emalia Clark">
+                  <div class="username">
+                    <a href="#Emalia-Clark">
+                      <h4>Emalia Clark</h4>
+                    </a>
+                    <p>Front-end Developer</p>
+                  </div>
+                </div> <!-- /.user -->
+
+                <p class="test-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga quam quidem odio
+                  quis
+                  repudiandae dolore dolor, facilis expedita nemo beatae? Quae sapiente eius voluptate excepturi maxime
+                  ipsa
+                  dolorem quisquam accusamus.</p>
+              </div> <!-- Item-2 -->
+            </div>
+          </div> <!-- Slide 3 -->
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- Testimonial Slider End -->
+
+
+    </div>
+  </section>
+  <!-- Tesimonials End -->
+
+
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+  <div style="height: 100px"></div>
+
+
+  <!-- Blogs Start -->
+  <section id="blogs">
+    <div class="container">
+      <div class="row mb-5 text-center">
+        <div class="col-md-6 offset-md-3">
+          <h3>Blogs</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, minima?</p>
+        </div>
+      </div> <!-- Section Header -->
+
+      <div class="row">
+        <div class="mb-5 col-md-4 col-sm-6 mx-auto">
+          <div class="blog-thubmbnail">
+            <img class="img-fluid" src="./img/blogs/blog1.jpg" alt="blog1">
+          </div>
+          <div class="blog-head">
+            <h4>How To Take Care of Work</h4>
+            <p>
+              <span>12.08.2018</span>
+              <span class="ml-3"><a href="#blog1">Inspiration</a></span>
+            </p>
+          </div>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora alias eaque quidem soluta, illum
+            voluptate magni culpa accusamus beatae placeat mollitia!</p>
+          <a href="#more1" class="read-more">Read More</a>
+        </div> <!-- Item-1 -->
+
+        <div class="mb-5 col-md-4 col-sm-6 mx-auto">
+          <div class="blog-thubmbnail">
+            <img class="img-fluid" src="./img/blogs/blog2.jpg" alt="blog2">
+          </div>
+          <div class="blog-head">
+            <h4>Always Care Your Every Work</h4>
+            <p>
+              <span>12.08.2018</span>
+              <span class="ml-3"><a href="#blog2">Inspiration</a></span>
+            </p>
+          </div>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora alias eaque quidem soluta, illum
+            voluptate magni culpa accusamus beatae placeat mollitia!</p>
+          <a href="#more1" class="read-more">Read More</a>
+        </div> <!-- Item-2 -->
+
+        <div class="mb-5 col-md-4 col-sm-6 mx-auto">
+          <div class="blog-thubmbnail">
+            <img class="img-fluid" src="./img/blogs/blog3.jpg" alt="blog3">
+          </div>
+          <div class="blog-head">
+            <h4>Always Care Your Every Work</h4>
+            <p>
+              <span>12.08.2018</span>
+              <span class="ml-3"><a href="#blog3">Inspiration</a></span>
+            </p>
+          </div>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora alias eaque quidem soluta, illum
+            voluptate magni culpa accusamus beatae placeat mollitia!</p>
+          <a href="#more1" class="read-more">Read More</a>
+        </div> <!-- Item-3 -->
+
+      </div> <!-- /.row -->
+    </div>
+  </section>
+  <!-- Blogs End -->
+
+
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+
+
+  <!-- Counter Start -->
+  <section id="counter">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6 text-center">
+          <div class="icon">
+            <i class="fa fa-2x fa-heart-o"></i>
+          </div>
+          <h4 class="counter">1325</h4>
+          <p>Happy Customers</p>
+        </div> <!-- Item-1 -->
+
+        <div class="col-md-3 col-sm-6 text-center">
+          <div class="icon">
+            <i class="fa fa-2x fa-heart-o"></i>
+          </div>
+          <h4 class="counter">1214</h4>
+          <p>Completed Projects</p>
+        </div> <!-- Item-2 -->
+
+        <div class="col-md-3 col-sm-6 text-center">
+          <div class="icon">
+            <i class="fa fa-2x fa-user"></i>
+          </div>
+          <h4 class="counter">10</h4>
+          <p>Years Experience</p>
+        </div> <!-- Item-3 -->
+
+        <div class="col-md-3 col-sm-6 text-center">
+          <div class="icon">
+            <i class="fa fa-2x fa-user"></i>
+          </div>
+          <h4 class="counter">375</h4>
+          <p>Wins Awerds</p>
+        </div> <!-- Item-4 -->
+      </div>
+    </div>
+  </section>
+  <!-- Counter End -->
+
+
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+
+
+  <!-- Blogs Start -->
+  <section id="contact">
+    <div class="container">
+      <div class="row mb-5 text-center">
+        <div class="col-md-6 offset-md-3">
+          <h3>Contact</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, minima?</p>
+        </div>
+      </div> <!-- Section Header -->
+
+      <div class="row">
+        <div class="col-sm-8 offset-sm-2 text-center">
+          <form>
+            <input type="text" class="form-control" id="name" placeholder="Your full Name">
+            <input type="email" class="form-control" id="email" placeholder="Your Address">
+            <textarea class="textarea form-control" id="message" rows="2">Your Message</textarea>
+            <button class="btn btn-dark btn-custom">Send Message</button>
+          </form>
+        </div>
+      </div> <!-- /.row -->
+    </div>
+  </section>
+  <!-- Blos End -->
+
+
+
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+
+
+
+  <!-- Footer Start -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12 text-left copyright">
+          <p>Copyright 2018 | <a class="s-icon" href="#">www.hasanmoni.me</a></p>
+        </div>
+        <div class="col-sm-6 col-xs-12 text-right social-icons">
+          <a class="s-icon" href="#"><i class="fa fa-facebook"></i></a>
+          <a class="s-icon" href="#"><i class="fa fa-twitter"></i></a>
+          <a class="s-icon" href="#"><i class="fa fa-instagram"></i></a>
+          <a class="s-icon" href="#"><i class="fa fa-youtube-play"></i></a>
+          <a class="s-icon" href="#"><i class="fa fa-git"></i></a>
+          <a class="s-icon" href="#"><i class="fa fa-dribbble"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <div id="goTop">
+    <a href="#hero" title="Go To Top">
+      <i class="fa fa-chevron-circle-up"></i>
+    </a>
+  </div>
+
+
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+  <!-- ************************************* -->
+
+
+
+  <!-- <script src="./node_modules/jquery/dist/jquery.slim.min.js"></script> -->
+  <script src="./node_modules/jquery/1.10.2/jquery.slim.min.js"></script>
+  <script src="./node_modules/proper/proper.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="./node_modules/waypoints/2.0.3/waypoints.min.js"></script>
+  <script src="./node_modules/counterup/jquery.counterup.min.js"></script>
+  <script src="./node_modules/swiper-slider/dist/js/swiper.min.js"></script>
+  <script src="./node_modules/jQueryEasing/jQueryEasing.min.js"></script>
+  <script src="./js/mian.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      // let percent = $('.progress').text();
+      // console.log(percent);
+      // let progress_bar = {
+      //   "width": percent,
+      // }
+      $('.progress').css("width", $('.progress').text().this)
+    })
+  </script>
+</body>
+
+</html>
+
+
+<!--    ***********   ****     ***    ********        -->
+<!--    ***********   *****    ***    **********      -->
+<!--    ****          ******   ***    ***    ****     -->
+<!--    ********      *** ***  ***    ***     ****    -->
+<!--    ********      ***  *** ***    ***     ****    -->
+<!--    ****          ***   ******    ***    ****     -->
+<!--    ***********   ***    *****    **********      -->
+<!--    ***********   ***     ****    ********        -->
